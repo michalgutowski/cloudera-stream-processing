@@ -14,6 +14,9 @@ sudo yum -y update
 # Installing docker and docker compose packages 
 sudo yum -y install docker docker-compose git
 
+# Enable Docker service
+sudo systemctl enable --now docker
+
 # Add public key to authorized keys for vagrant user
 cat /vagrant/id_rsa.pub >> /home/vagrant/.ssh/authorized_keys
 
